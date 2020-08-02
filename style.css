@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    background-color: #6C6666;
+    color: #F9F6F6;
+    text-align: center;
+    margin-bottom: 0;
+}
+div{
+    border: .5px solid #1C6EA4;
+}
+
+/* Side bar on html */
+.side{
+    background-color: #e4e4e4;
+    height: 700px;
+}
+
+/* Main Portion top then bottom */
+
+.main-top ul{
+    height: 300px;
+    margin: 50px 50px 50px 50px;
+    padding: 20px 20px;
+    list-style: none;
+    border: thin solid black;
+}

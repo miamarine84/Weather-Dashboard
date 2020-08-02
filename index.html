@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Weather Forecast</title>
+</head>
+
+<body>
+        <h1>Weather Dashboard</h1>
+        <!-- Start of side portion-->
+        <div class="row">
+            <div class="col-3 side" >
+                <br>
+                <h4>Please enter a city:</h4>
+                <form>
+                    <input id="userText" type="text" placeholder="Enter your city" /> 
+                    <br> 
+                    <input type="button" id="button" value="Submit"></button>
+                </form>
+            </div>
+            <!-- End of side portion-->
+            <div class="col-9">
+                <div class="row main-top">
+                    <ul>
+                        <br>
+                        <br>
+                        <li>
+                            <h2 id="city-top"> <!-- Users input city name goes here through JS--> </h2>
+                        </li>
+                        <li>
+                            <h6 id="temperature">
+                                Temperature: 
+                            </h6>
+                        </li>
+                        <br>
+                        <li>
+                            <h6 id="humidity">
+                                humidity goes here
+                            </h6>
+                        </li>
+                        <br>
+                        <li>
+                            <h6 id="wind-speed">    
+                                wind-speed goes here
+                            </h6>
+                        </li>
+                        <br>
+                        <li>
+                            <h6 id="uv-index">
+                                uv index goes here
+                            </h6>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row main-bottom">
+                    <!-- Here is the setup for the 5 day forecast once user selects a city-->
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./script.js"></script>
+</body>
+
+</html>
