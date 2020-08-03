@@ -11,59 +11,69 @@
 </head>
 
 <body>
-        <h1>Weather Dashboard</h1>
-        <!-- Start of side portion-->
-        <div class="row">
-            <div class="col-3 side" >
+    <h1>Weather Dashboard</h1>
+    <!-- Start of side portion-->
+    <div class="row">
+        <div class="col-3 side">
+            <br>
+            <h4>Please enter a city:</h4>
+            <form>
+                <input type="text" id="userText" placeholder="Enter city here">
                 <br>
-                <h4>Please enter a city:</h4>
-                <form>
-                    <input id="userText" type="text" placeholder="Enter your city" /> 
-                    <br> 
-                    <input type="button" id="button" value="Submit"></button>
-                </form>
+                <br>
+                <input id="inputButton" type="submit" value="Submit">
+            </form>
+        </div>
+        <!-- End of side portion-->
+        <div class="col-9">
+            <div class="row main-top">
+                <ul>
+                    <br>
+                    <br>
+                    <li>
+                        <h2 id="city-top">
+                            <!-- Users input city name goes here through JS-->
+                        </h2>
+                    </li>
+                    <li>
+                        <h6 id="temperature">
+                            Temperature:
+                        </h6>
+                    </li>
+                    <br>
+                    <li>
+                        <h6 id="humidity">
+                            humidity goes here
+                        </h6>
+                    </li>
+                    <br>
+                    <li>
+                        <h6 id="wind-speed">
+                            wind-speed goes here
+                        </h6>
+                    </li>
+                    <br>
+                    <li>
+                        <h6 id="uv-index">
+                            uv index goes here
+                        </h6>
+                    </li>
+                </ul>
             </div>
-            <!-- End of side portion-->
-            <div class="col-9">
-                <div class="row main-top">
-                    <ul>
-                        <br>
-                        <br>
-                        <li>
-                            <h2 id="city-top"> <!-- Users input city name goes here through JS--> </h2>
-                        </li>
-                        <li>
-                            <h6 id="temperature">
-                                Temperature: 
-                            </h6>
-                        </li>
-                        <br>
-                        <li>
-                            <h6 id="humidity">
-                                humidity goes here
-                            </h6>
-                        </li>
-                        <br>
-                        <li>
-                            <h6 id="wind-speed">    
-                                wind-speed goes here
-                            </h6>
-                        </li>
-                        <br>
-                        <li>
-                            <h6 id="uv-index">
-                                uv index goes here
-                            </h6>
-                        </li>
-                    </ul>
-                </div>
-                <div class="row main-bottom">
-                    <!-- Here is the setup for the 5 day forecast once user selects a city-->
+            <div class="row main-bottom">
+                <h3>5-Day Forecast</h3>
+                <!-- Here is the setup for the 5 day forecast once user selects a city-->
+                <br>
+                <div class="row">
+                    <div id="weather-ajax" class="col-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iusto nostrum cum, rerum laudantium dolorem corporis, consequuntur rem nihil minus porro quidem facilis provident ipsa ratione labore, iure aliquam eaque.
+                    </div>
                 </div>
             </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="./script.js"></script>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
