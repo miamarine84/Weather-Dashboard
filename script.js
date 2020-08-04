@@ -4,14 +4,14 @@ $(document).ready(function() {
 
 
 $('#inputButton').click(function(e){
-    
-
     let userInput = $('#userText').val();
-    console.log(userInput);
     e.preventDefault();
+    weather(userInput);
 })
-function weather(){
-let weatherURL = "api.openweathermap.org/data/2.5/weather?q=miami&appid=2a255b648d741897177dc2c2d31abf26"
+
+function weather(userInput){
+
+let weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + userInput + "&appid=2a255b648d741897177dc2c2d31abf26";
 
 
 $.ajax({
@@ -21,4 +21,5 @@ $.ajax({
       console.log(response)
   });
 }
+
 });
