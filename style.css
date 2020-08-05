@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+
 }
 h1{
     background-color: #6C6666;
@@ -16,7 +17,10 @@ h1{
     background-color: #e4e4e4;
     height: 900px;
 }
-
+.col-10{
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIYMKUrdUNufu1ziZ_TOA32RG65djBpsCe7Q&usqp=CAU'); */
+    width: 100%; 
+}
 /* Main Portion top*/
 .main-top{
     margin: 15px 15px;
@@ -29,15 +33,30 @@ h1{
     margin: 50px 50px 50px 50px;
     padding: 20px 20px;
     list-style: none;
+
+
 }
 
 /* Main Portion bottom  */
 .main-bottom h3{
+    width: 100%;
     padding-left: 20px;
+
+
 }
 
-/* #weather-ajax{
+#weather-ajax{
     border: .5px solid #494646;
     margin-left: 20px;
-} */
+    padding: 2.5% 2.5%;
+    border: none;
+    width: 100%;
+}
+
+.yourClass{
+    background-color: #7079F6;    
+    color: #FFFFFF;
+    margin: 1% 1%;
+    padding: 3% 1%;
+}
 
