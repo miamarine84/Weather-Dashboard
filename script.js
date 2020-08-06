@@ -94,7 +94,7 @@ $(document).ready(function () {
   var longitud = response.city.coord.lon;
   //this is the url for the UV index
   var uv =
-    "http://api.openweathermap.org/data/2.5/uvi?appid=e5f561d692ee5b0d5bfef99cb764f31d&lat=" +
+    "https://api.openweathermap.org/data/2.5/uvi?appid=e5f561d692ee5b0d5bfef99cb764f31d&lat=" +
     latitud +
     "&lon=" +
     longitud;
