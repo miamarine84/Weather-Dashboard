@@ -5,20 +5,42 @@ $(document).ready(function () {
 
   $('#inputButton').click(function (e) {
     let userInput = $('#userText').val();
-    e.preventDefault();
+    choices.push(userInput);
     weather(userInput);
+
+    console.log(choices)
+    e.preventDefault();
     $('#city-top').empty();
     $('#temperature').empty();
     $('#humidity').empty();
     $('#wind-speed').empty();
     $('#current').empty();
     $('#weather-ajax').empty();
+
+    
+
+
+    for(i=0;i<choices.length;i++){
+      localStorage.setItem('key'+[i],choices[i])
+      userLocalStorage = localStorage.getItem('key')
+      }
+
+
+  console.log(localStorage)
+  console.log(userLocalStorage)
+
+
   })
+  let choices = [];
+
+
+  
+
 
 
   function weather(userInput) {
 
-    
+
     //Current temperature portion
     let currentWeather = 'https://api.openweathermap.org/data/2.5/weather?q=' + userInput + '&appid=2a255b648d741897177dc2c2d31abf26'
     $.ajax({
@@ -38,7 +60,7 @@ $(document).ready(function () {
       $('#temperature').append("Current Temperature: " + temperature + ' Farenheit');
       //Current humidity
       let humidity = current.main.humidity;
-      $('#humidity').append("Humidity: " + humidity + ' %');
+      $('#humidity').append("Humidity: " + humidity + '%');
       //Current wind speed
       let windSpeed = current.wind.speed;
       $('#wind-speed').append("Current Wind Speed: " + windSpeed + ' mph');
@@ -50,6 +72,7 @@ $(document).ready(function () {
         // Current decription
       let currentDescription = current.weather[0].description;
       $('#current').append("Current Weather: " + currentDescription)
+
     })
 
 
@@ -66,6 +89,19 @@ $(document).ready(function () {
       type: "GET"
     }).then(function (response) {
       console.log(response)
+  //this is are my variables for the UV index
+  var latitud = response.city.coord.lat;
+  var longitud = response.city.coord.lon;
+  //this is the url for the UV index
+  var uv =
+    "http://api.openweathermap.org/data/2.5/uvi?appid=e5f561d692ee5b0d5bfef99cb764f31d&lat=" +
+    latitud +
+    "&lon=" +
+    longitud;
+    console.log(uv)
+    $.get(uv).then(function (uvIndex) {
+      $("#uv").text("UV: " + uvIndex.value);
+    });
 
       for (i = 2; i < 40; i += 8) {
         let newDiv = $('<div>').attr("id", "number" + [i]).addClass('col-2 yourClass');
@@ -86,14 +122,23 @@ $(document).ready(function () {
 
         //Get humidity
         let humidity = 'Humidity: ' + response.list[i].main.humidity;
-        humidity = $('<h6>').text(humidity)
+        humidity = $('<h6>').text(humidity + '%')
 
 
         let final = $(newDiv).append(date, icon, temperature, humidity)
         $('#weather-ajax').append(final)
-        // console.log(humidity)
       }
+    //adding button for previous choices
+      for(i = 0;i<choices.length;i++){
 
+        let newButton = $('<button>') 
+        $(newButton).addClass('usersChoices'+[i]);
+        let newInput = $(newButton).append(userInput);
+        console.log(newInput)
+        $('#previous-opt').append(newInput[i]);
+
+     
+      }
     });
   }
 

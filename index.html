@@ -21,8 +21,12 @@
                 <input type="text" id="userText" placeholder="Enter city here">
                 <br>
                 <br>
-                <input id="inputButton" type="submit" value="Submit">
+                <input id="inputButton" type="submit" value="Click when ready">
             </form>
+            <br>
+            <div id="previous-opt">
+                Previous Choices:
+            </div>
         </div>
         <!-- End of side portion-->
         <div class="col-10">
@@ -39,28 +43,33 @@
                             Current Temperature: 
                         </h4>
                     </li>
-                    <br>
+              
                     <li>
                         <h4 id="humidity">
                             Humidity: 
                         </h4>
                     </li>
-                    <br>
+                 
                     <li>
                         <h4 id="wind-speed">
                             Current Wind speed: 
                         </h4>
                     </li>
-                    <br>
+                 
                     <li>
                         <h4 id="current">
                             Current Weather: 
                         </h4>
                     </li>
+                    <li>
+                        <h4 id="uv">
+                            UV:
+                        </h4>
+                    </li>
                 </ul>
             </div>
             <div class="row main-bottom">
-                <h3>5-Day Forecast</h3>
+                <h3>5-Day Forecast:</h3>
                 <!-- Here is the setup for the 5 day forecast once user selects a city-->
                 <br>
                 <div class="row" id="weather-ajax">

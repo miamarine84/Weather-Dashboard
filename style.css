@@ -8,6 +8,7 @@ h1{
     color: #F9F6F6;
     text-align: center;
     margin-bottom: 0;
+    padding: 15px 0;
 }
 
 
@@ -18,8 +19,13 @@ h1{
     height: 900px;
 }
 .col-10{
-    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIYMKUrdUNufu1ziZ_TOA32RG65djBpsCe7Q&usqp=CAU'); */
+
     width: 100%; 
+}
+#previous-opt button{
+    width: 100%;
+    margin-top: 15px;
+    height: 30px;
 }
 /* Main Portion top*/
 .main-top{
@@ -27,6 +33,7 @@ h1{
 
     border: .5px solid #494646;
 }
+
 
 .main-top ul{
     height: 300px;
